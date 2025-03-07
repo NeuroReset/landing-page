@@ -13,6 +13,7 @@
         }
         body {
             background: url('https://source.unsplash.com/1600x900/?technology,dark') no-repeat center center/cover;
+            background-attachment: fixed;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -21,39 +22,77 @@
             color: white;
         }
         .container {
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             padding: 40px;
-            border-radius: 10px;
-            max-width: 600px;
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
         }
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
         p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
         }
         .btn {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 18px 40px;
             font-size: 1.2rem;
             color: white;
-            background: red;
+            background: #00bcd4;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 30px;
             transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
         }
         .btn:hover {
-            background: darkred;
+            background: #008c9e;
+            transform: scale(1.05);
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .feature {
+            width: 30%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .feature p {
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Desintoxique sua mente</h1>
+        <h1>Desintoxique sua mente com NeuroReset</h1>
         <p>Descubra como redefinir seu cérebro e recuperar o controle da sua vida.</p>
-        <a href="#" class="btn">Comece agora</a>
+        <a href="#" class="btn">Comece Agora</a>
+
+        <!-- Seção de recursos -->
+        <div class="features">
+            <div class="feature">
+                <h3>Foco</h3>
+                <p>Aumente seu foco e concentração com práticas eficazes de desintoxicação mental.</p>
+            </div>
+            <div class="feature">
+                <h3>Controle Emocional</h3>
+                <p>Recupere o controle emocional e reduza o estresse com técnicas comprovadas.</p>
+            </div>
+            <div class="feature">
+                <h3>Bem-estar</h3>
+                <p>Reduza a ansiedade e sinta uma sensação de equilíbrio e paz mental.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
