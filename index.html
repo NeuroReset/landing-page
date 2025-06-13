@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
+<div class="trilha-progresso" id="trilhaProgresso" style="display: none;">
+  <div class="barra-fundo">
+    <div class="barra-progresso" id="barraProgresso"></div>
+    <div class="checkpoint" style="left: 20%;" id="cp1"></div>
+    <div class="checkpoint" style="left: 45%;" id="cp2"></div>
+    <div class="checkpoint" style="left: 65%;" id="cp3"></div>
+    <div class="checkpoint" style="left: 100%;" id="cp4"></div>
+  </div>
+</div>
+
 <body>
 
   <section class="container">
@@ -43,13 +54,13 @@
     <p class="subheadline">Pra que possamos personalizar sua fase de dança.</p>
 
     <input type="text" id="inputNome" placeholder="Digite seu nome" class="nome-input" />
-    <button class="botao-avanco" onclick="mostrarProvaSocial()">Continuar</button>
+    <button class="botao-avanco" id="btnNome" onclick="mostrarProvaSocial()">Continuar</button>
 
       <div id="provaSocial" style="display: none; margin-top: 2rem;">
         <img src="img/5.pg" alt="Prova Social" class="hero-img" />
         <h2><span id="leadName">Você</span>, +500 mil mulheres</h2>
         <p>Confiaram na DANCEFIT para atingirem suas metas</p>
-        <button class="botao-avanco" onclick="irParaProximaEtapa('page2', 'step3')">Continuar</button>
+        <button class="botao-avanco" onclick="irParaProximaEtapa('page2', 'step3'); atualizarTrilha('step3')">Continuar</button>
       </div>
   </section>
 
@@ -77,7 +88,7 @@
     </div>
     
 
-    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step3', 'step4')">Avançar ➜</button>
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step3', 'step4'); atualizarTrilha('step4')">Avançar ➜</button>
   </section>
 
   <!-- STEP 4 - Escolha visual -->
@@ -104,7 +115,7 @@
     </div>
     
 
-    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step4', 'step5')">Avançar ➜</button>
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step4', 'step5'); atualizarTrilha('step5')">Avançar ➜</button>
   </section>
 
   <!-- STEP 5 - Escolha visual -->
@@ -131,7 +142,7 @@
     </div>
     
 
-    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step5', 'step6')">Avançar ➜</button>
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step5', 'step6'); ; atualizarTrilha('step6')">Avançar ➜</button>
   </section>
  
   <!-- STEP 6 - Escolha visual -->
@@ -158,7 +169,7 @@
     </div>
     
 
-    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step6', 'step7')">Avançar ➜</button>
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step6', 'step7'); atualizarTrilha('step7')">Avançar ➜</button>
   </section>
 
   <!-- STEP 7 - Escolha visual -->
@@ -185,7 +196,7 @@
     </div>
     
 
-    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step7', 'step8')">Avançar ➜</button>
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step7', 'step8'); atualizarTrilha('step8')">Avançar ➜</button>
   </section>
  
   <!-- STEP 8 - Escolha visual -->
@@ -212,7 +223,7 @@
     </div>
     
 
-    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step8', 'step9')">Avançar ➜</button>
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step8', 'step9'); atualizarTrilha('step9')">Avançar ➜</button>
   </section>
 
   <!-- STEP 9 - primeira quebra -->
