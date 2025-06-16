@@ -81,3 +81,18 @@ function mostrarTrilha() {
     atualizarTrilha("step3"); // já começa no 1º checkpoint
   }
 }
+
+document.querySelectorAll('.card-opcao').forEach(card => {
+  card.addEventListener('click', () => {
+    // marca visual
+    card.classList.toggle('selecionado');
+
+    // busca botão de avanço do step atual
+    const step = card.closest("section");
+    const botao = step.querySelector(".botao-avanco");
+
+    // se houver ao menos 1 selecionado, ativa o botão
+    const algumSelecionado = step.querySelectorAll(".card-opcao.selecionado").length > 0;
+    if (botao) botao.disabled = !algumSelecionado;
+  });
+});
