@@ -464,7 +464,7 @@
     <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step11', 'step12'); atualizarTrilha('step12')">Avançar ➜</button>
   </section>
 
-<!-- STEP 12 - Escolha visual -->
+  <!-- STEP 12 - Escolha visual -->
   <section class="step12" style="display: none;">
 
     <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
@@ -717,7 +717,7 @@
     <div class="card-opcao">
       <img src="img/corpo1.webp" alt="">
       <label>
-        <span>Ombro</span>
+        <span>Preciso de café pra me manter ativa</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -726,7 +726,314 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Pescoço</span>
+        <span>Me sinto ativa durante o dia todo</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step16', 'step17'); atualizarTrilha('step17')">Avançar ➜</button>
+  </section>
+
+  <!-- STEP 17 - Escolha visual -->
+  <section class="step17" style="display: none;">
+
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Quanta água você toma diariamente?
+    </p>
+
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Tomo apenas café ou chá</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Menos de um litro</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Até 2 litros</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Mais de 2 litros</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step17', 'step18'); atualizarTrilha('step18')">Avançar ➜</button>
+  </section>
+
+  <!-- STEP 18 - Quantas horas você dorme -->
+  <section class="step18" style="display: none;">
+    <h2 class="headline" style="text-align: center;">
+      Quantas horas você dorme por dia?
+    </h2>
+
+    <div class="imagem-ilustrativa" style="text-align: center; margin: 2rem 0;">
+      <img src="img/sono.webp" alt="Pessoa acordando feliz" style="width: 100%; max-width: 400px; border-radius: 20px;">
+    </div>
+
+    <div class="opcoes-sono">
+      <button class="card-sono" onclick="irParaProximaEtapa('step18', 'step19'); atualizarTrilha('step19')">
+        Menos de 5 horas
+      </button>
+
+      <button class="card-sono" onclick="irParaProximaEtapa('step18', 'step19'); atualizarTrilha('step19')">
+        De 5 a 6 horas
+      </button>
+
+      <button class="card-sono" onclick="irParaProximaEtapa('step18', 'step19'); atualizarTrilha('step19')">
+        Entre 7 e 8 horas
+      </button>
+
+      <button class="card-sono" onclick="irParaProximaEtapa('step18', 'step19'); atualizarTrilha('step19')">
+        Mais que 8 horas
+      </button>
+    </div>
+
+    </div>
+  </section>
+
+  <!-- STEP 19 - primeira quebra -->
+  <section class="step19" style="display: none;">
+      <img src="img/logo.webp" alt="Logo" class="logo" />
+
+      <h2 class="headline destaque-bonus">Esqueça pranchas, flexões e essas coisas</h2>
+      <p class="subheadline">
+        O DANCEFIT vai te ajudar a entrar em forma com métodos de dança que são comprovadamente
+        mais eficazes (mesmo que você não saiba dançar)
+      </p>
+
+      <div class="video-bloco">
+        <img src="img/video-bonus.webp" alt="Mulher dançando" class="video-thumb" />
+        <p class="legenda-video">INCRÍVEL</p>
+      </div>
+
+      <div class="bloco-bonus">
+        <h3 class="bonus-titulo">🎁 Primeiro bônus da gamificação</h3>
+        <p>Vamos entregar uma nutricionista que custaria <strong>“xx” reais/mês</strong> de graça pra você.</p>
+      </div>
+
+      <button class="botao-avanco" onclick="irParaProximaEtapa('step19', 'step20');  atualizarTrilha('step20')">Continuar ➜</button>
+  </section>
+
+  <!-- STEP 20 - Segundo bônus -->
+  <section class="step20" style="display: none;">
+    <img src="img/logo.webp" alt="Logo" class="logo" />
+
+    <h2 class="headline destaque-bonus">Você desbloqueou o segundo bônus!</h2>
+    <p class="subheadline">
+      Aulas exclusivas criadas para ajudar você a eliminar diástase, pochete e barriga flácida
+    </p>
+
+    <div class="video-bloco">
+      <img src="img/explosao.webp" alt="Explosão de resultado" class="video-thumb" />
+      <p class="legenda-video">🔥 Transformação total</p>
+    </div>
+
+    <div class="bloco-bonus">
+      <h3 class="bonus-titulo">🎁 Segundo bônus da gamificação</h3>
+      <p>
+        Você ganhou uma professora de dança particular para guiar seus treinos que custaria
+        <strong>"xx"</strong> por mês de graça.
+      </p>
+      <p>
+        🔓 Acesso desbloqueado às aulas inéditas:<br>
+        • Pochete Nunca Mais<br>
+        • Barriga flácida<br>
+        • Diástase
+      </p>
+      <p>Esses treinos foram criados para transformar sua cintura em semanas!</p>
+    </div>
+
+    <button class="botao-avanco" onclick="irParaProximaEtapa('step20', 'step21'); atualizarTrilha('step21')">Continuar ➜</button>
+  </section>
+
+  <!-- STEP 21 - Escolha visual -->
+  <section class="step21" style="display: none;">
+
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Selecione o seu nível na dança
+    </p>
+
+    <p style="color: #ff5c5c; font-weight: 500; text-align: center; margin-bottom: 0.5rem;">
+      Vamos adaptar suas danças conforme você for avançando
+    </p>
+
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Iniciante<br>
+        quero começar a dançar</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Intermediária<br>
+        já tenho experiência com dança</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Avançada<br>
+        sou profissional e tenho algumas aulas de dança</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step21', 'step22'); atualizarTrilha('step22')">Avançar ➜</button>
+  </section>
+
+  <!-- STEP 22 - Escolha visual -->
+  <section class="step22" style="display: none;">
+
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Qual desses estilos de dança você gostaria de experimentar?
+    </p>
+
+    <p style="color: #ff5c5c; font-weight: 500; text-align: center; margin-bottom: 0.5rem;">
+      Você pode selecionar várias opções, iremos atualizar os ritmos a cada 21 dias.
+    </p>
+
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Cardio suave<br>
+        Movimentos dinâmicos e de baixo impacto para a terceira idade</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Latina<br>
+        Movimentos intensos para perder quilos extras</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Dança Fitness<br>
+        Exercícios de dança divertidos que ajudam a perder peso</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Brasileiras<br>
+        Melhore seu equilíbrio e trabalhe seu coração ao som dos ritmos afro</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Hip Hop<br>
+        Dança de rua urbana ótima para afinar</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step22', 'step23'); atualizarTrilha('step23')">Avançar ➜</button>
+  </section>
+
+  <!-- STEP 23 - Comparativo com academia -->
+  <section class="step23" style="display: none;">
+    <div class="imagem-comparativo">
+      <img src="img/comparativo.webp" alt="Gráfico de queima calórica" class="hero-img" />
+    </div>
+
+    <p style="text-align: center; font-weight: 600; font-size: 1rem; margin-top: 1.5rem;">
+      Nosso método vs pagar 200 reais de mensalidade na academia
+    </p>
+
+    <button class="botao-avanco" onclick="irParaProximaEtapa('step23', 'step24'); atualizarTrilha('step24')">Continuar ➜</button>
+  </section>
+
+  <!-- STEP 24 - Escolha visual -->
+  <section class="step24" style="display: none;">
+
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Algum desses eventos te fez ganhar peso nos últimos tempos?
+    </p>
+
+    <p style="color: #ff5c5c; font-weight: 500; text-align: center; margin-bottom: 0.5rem;">
+      Pode selecionar mais de um!
+    </p>
+
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Pressão no trabalho</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Vida em família</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Divórcio ou término</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Metabolismo lento</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -744,7 +1051,7 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Cotovelos</span>
+        <span>Gravidez ou mudanças pós-parto</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -753,7 +1060,7 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Pernas</span>
+        <span>Desafios financeiros</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -762,17 +1069,79 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Pés</span>
+        <span>Pandemia de covid-19</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
     </div>
 
-    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step16', 'step17'); atualizarTrilha('step17')">Avançar ➜</button>
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Outros eventos</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Nenhum deles</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step24', 'step25'); atualizarTrilha('step25')">Avançar ➜</button>
   </section>
 
+  <!-- STEP 25 - Escolha visual -->
+  <section class="step25" style="display: none;">
 
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Qual a sua maior motivação para perder peso?
+    </p>
 
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Me sentir mais confiante</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Ser mais saudável e ter energia</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Voltar ao corpo depois da gravidez</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Outro</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step24', 'step25'); atualizarTrilha('step25')">Avançar ➜</button>
+  </section>
 
 
 
@@ -900,6 +1269,7 @@
       <p>Você tem 7 dias para testar e se não gostar por qualquer motivo, devolvemos 100% do seu dinheiro.</p>
     </div>
   </section>
+
 
   <script src="js/script.js"></script>
 </body>
