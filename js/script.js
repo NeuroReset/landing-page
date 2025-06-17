@@ -37,16 +37,17 @@ function irParaProximaEtapa(stepAtual, proximoStep) {
   const botaoAvanco = stepElement.querySelector(".botao-avanco");
 
   // Libera o botão se alguma opção for marcada
-  if (botaoAvanco) {
-    botaoAvanco.disabled = true;
+  if (botaoAvanco && opcoes.length > 0) {
+    botaoAvanco.disabled = true
 
     opcoes.forEach(opcao => {
       opcao.addEventListener("change", () => {
-        const algumSelecionado = Array.from(opcoes).some(o => o.checked);
-        botaoAvanco.disabled = !algumSelecionado;
-      });
-    });
+        const algumSelecionado = Array.from(opcoes).some(o => o.checked)
+        botaoAvanco.disabled = !algumSelecionado
+      })
+    })
   }
+
 }
 
 function atualizarTrilha(stepAtual) {
@@ -96,3 +97,79 @@ document.querySelectorAll('.card-opcao').forEach(card => {
     if (botao) botao.disabled = !algumSelecionado;
   });
 });
+
+const canvas = document.getElementById('canvasRoleta')
+const ctx = canvas.getContext('2d')
+const btn = document.getElementById('btnGirarCanvas')
+const resultado = document.getElementById('resultadoRoleta')
+
+const premios = [
+  '100 reais', 'R$5 OFF', '120 reais',
+  'Quase lá', 'Nada', '10% OFF',
+  'R$5 OFF', 'Mais sorte'
+]
+const cores = [
+  '#f94144', '#f3722c', '#f9c74f', '#90be6d',
+  '#43aa8b', '#577590', '#9b5de5', '#f15bb5'
+]
+
+const total = premios.length
+const anguloPorSetor = 360 / total
+let angle = 0
+let girando = false
+
+function desenharRoleta() {
+  for (let i = 0; i < total; i++) {
+    const start = (angle + i * anguloPorSetor) * Math.PI / 180
+    const end = (angle + (i + 1) * anguloPorSetor) * Math.PI / 180
+
+    ctx.beginPath()
+    ctx.moveTo(150, 150)
+    ctx.arc(150, 150, 150, start, end)
+    ctx.fillStyle = cores[i % cores.length]
+    ctx.fill()
+
+    // Texto
+    ctx.save()
+    ctx.translate(150, 150)
+    ctx.rotate((start + end) / 2)
+    ctx.textAlign = 'right'
+    ctx.fillStyle = '#fff'
+    ctx.font = 'bold 14px Poppins'
+    ctx.fillText(premios[i], 140, 10)
+    ctx.restore()
+  }
+}
+
+function girarParaPremio(indexPremiado) {
+  if (girando) return
+  girando = true
+
+  const voltas = 5
+  const destinoFinal = 360 * voltas - (indexPremiado * anguloPorSetor + anguloPorSetor / 2)
+  let atual = 0
+
+  const intervalo = setInterval(() => {
+    ctx.clearRect(0, 0, 300, 300)
+    angle += 5
+    angle %= 360
+    desenharRoleta()
+    atual += 5
+
+    if (atual >= destinoFinal) {
+      clearInterval(intervalo)
+      girando = false
+      resultado.style.display = 'block'
+      localStorage.setItem('roletaGirada', 'true')
+      btn.style.display = 'none'
+    }
+  }, 16)
+}
+
+// Inicializa
+desenharRoleta()
+
+btn.addEventListener('click', () => {
+  // Sempre cair no índice 1 → 'R$5 OFF'
+  girarParaPremio(1)
+})
