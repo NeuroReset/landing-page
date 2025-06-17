@@ -353,3 +353,169 @@ body {
     top: -4px;
   }
 }
+
+/* Estrutura geral do step10 */
+.step10 {
+  font-family: 'Poppins', sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: #333
+}
+
+/* Título principal */
+.step10 .headline {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #1e1e1e
+}
+
+/* Antes e depois */
+.antes-depois {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem
+}
+
+.lado {
+  text-align: center
+}
+
+.lado h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem
+}
+
+.lado img {
+  max-width: 100px;
+  height: auto
+}
+
+/* Lista de benefícios */
+.beneficios {
+  list-style: none;
+  padding-left: 0;
+  margin: 2rem 0;
+  font-size: 0.95rem
+}
+
+.beneficios li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5
+}
+
+/* Oferta */
+.oferta {
+  text-align: center;
+  background: #e7fff2;
+  border: 2px solid #c6f0d4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem
+}
+
+.oferta .timer {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #333
+}
+
+.oferta .preco p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1c1c1c
+}
+
+.oferta .preco h2 {
+  font-size: 2rem;
+  color: #29b36b;
+  margin: 0.5rem 0
+}
+
+.botao-compra {
+  background: #29b36b;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 280px
+}
+
+.botao-compra:hover {
+  background: #24a15f
+}
+
+.oferta img {
+  margin-top: 1rem;
+  max-width: 100%;
+}
+
+/* Informações adicionais */
+.como-receber, .garantia {
+  background: #f7f7f7;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #29b36b;
+  border-radius: 4px;
+}
+
+.como-receber h3, .garantia h4 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.como-receber p, .garantia p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.roleta-canvas-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 2rem auto;
+}
+
+#canvasRoleta {
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.ponteiro-canvas {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid red;
+}
+
+.girar-roleta {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background-color: #C2FF00;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.resultado-roleta {
+  text-align: center;
+  margin-top: 2rem;
+}
