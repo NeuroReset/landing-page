@@ -9,17 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
-<div class="trilha-progresso" id="trilhaProgresso" style="display: none;">
-  <div class="barra-fundo">
-    <div class="barra-progresso" id="barraProgresso"></div>
-    <div class="checkpoint" style="left: 20%;" id="cp1"></div>
-    <div class="checkpoint" style="left: 45%;" id="cp2"></div>
-    <div class="checkpoint" style="left: 65%;" id="cp3"></div>
-    <div class="checkpoint" style="left: 100%;" id="cp4"></div>
-  </div>
-</div>
-
 <body>
+
+    <div class="trilha-progresso" id="trilhaProgresso" style="display: none;">
+      <div class="barra-fundo">
+        <div class="barra-progresso" id="barraProgresso"></div>
+        <div class="checkpoint" style="left: 20%;" id="cp1"></div>
+        <div class="checkpoint" style="left: 45%;" id="cp2"></div>
+        <div class="checkpoint" style="left: 65%;" id="cp3"></div>
+        <div class="checkpoint" style="left: 100%;" id="cp4"></div>
+      </div>
+    </div>
 
   <section class="container">
     <img src="img/logo.webp" alt="Logo" class="logo">
@@ -81,25 +81,51 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>Deixar a barriga chapada</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
     </div>
     
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Bumbum bem firme</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>frtalecer as pernas</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Tonificar os braços</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
 
     <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step3', 'step4'); atualizarTrilha('step4')">Avançar ➜</button>
   </section>
 
   <!-- STEP 4 - Escolha visual -->
   <section class="step4" style="display: none;">
-    <h2 class="headline">4</h2>
+    <h2 class="headline">Qual dessas imagens descreve o seu físio hoje?</h2>
 
     <!-- Bloco de opções -->
     <div class="card-opcao">
       <img src="img/corpo1.webp" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>SLIM</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -108,25 +134,42 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>MID SIZE</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
     </div>
     
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>PLUS SIZE</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>SOBREPESO</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
 
     <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step4', 'step5'); atualizarTrilha('step5')">Avançar ➜</button>
   </section>
 
   <!-- STEP 5 - Escolha visual -->
   <section class="step5" style="display: none;">
-    <h2 class="headline">5</h2>
+    <h2 class="headline">Qual o corpo dos seus sonhos?</h2>
 
     <!-- Bloco de opções -->
     <div class="card-opcao">
       <img src="img/corpo1.webp" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>AFINADO</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -135,25 +178,54 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>TORNEADO</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
     </div>
     
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>COM CURVAS</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>SAÚDAVEL</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
 
     <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step5', 'step6'); ; atualizarTrilha('step6')">Avançar ➜</button>
   </section>
  
   <!-- STEP 6 - Escolha visual -->
   <section class="step6" style="display: none;">
-    <h2 class="headline">6</h2>
+
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Perfeito! Seu objetivo é <strong>FICAR DEFINIDA.</strong>
+    </p>
+
+    <p style="color: #ff5c5c; font-weight: 500; text-align: center; margin-bottom: 0.5rem;">
+      Você terá acesso a sequências pensadas pra quem quer definir barriga,<br>
+      pernas e glúteos, mesmo começando do zero.
+    </p>
+
+    <p style="color: #3c1e84; font-weight: 600; text-align: center;">
+      Quando foi a última vez que você se sentiu na sua melhor forma?
+    </p>
 
     <!-- Bloco de opções -->
     <div class="card-opcao">
       <img src="img/corpo1.webp" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>Menos de 1 ano</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -162,7 +234,25 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>Entre 1 e 2 anos</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Mais de 3 anos</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Nunca estive</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -174,13 +264,15 @@
 
   <!-- STEP 7 - Escolha visual -->
   <section class="step7" style="display: none;">
-    <h2 class="headline">iro?</h2>
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Como você descreveria seu corpo em relação ao peso?
+    </p>
 
     <!-- Bloco de opções -->
     <div class="card-opcao">
       <img src="img/corpo1.webp" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>Engorda fácil</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -189,25 +281,44 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>Engordo e emagreço</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
     </div>
-    
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Dificil de ganhar peso</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
 
     <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step7', 'step8'); atualizarTrilha('step8')">Avançar ➜</button>
   </section>
  
   <!-- STEP 8 - Escolha visual -->
   <section class="step8" style="display: none;">
-    <h2 class="headline">iro?</h2>
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Entendemos exatamente o que você sente.</strong>
+    </p>
+
+    <p style="color: #ff5c5c; font-weight: 500; text-align: center; margin-bottom: 0.5rem;">
+      Nosso plano inclui movimentos e ritmos pensados para ativar o metabolismo, mesmo<br>
+      em quem tem dificuldade pra emagrecer.
+    </p>
+
+    <p style="color: #3c1e84; font-weight: 600; text-align: center;">
+      Você já fez algum treinamento antes?
+    </p>
 
     <!-- Bloco de opções -->
     <div class="card-opcao">
       <img src="img/corpo1.webp" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>Nunca fiz</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -216,48 +327,56 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>Tenho alguma experiência</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
     </div>
     
-
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Ja tentei de tudo</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+    
     <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step8', 'step9'); atualizarTrilha('step9')">Avançar ➜</button>
   </section>
 
   <!-- STEP 9 - primeira quebra -->
   <section class="step9" style="display: none;">
-    <img src="img/logo.webp" alt="Logo" class="logo" />
+      <img src="img/logo.webp" alt="Logo" class="logo" />
 
-    <h2 class="headline destaque-bonus">Esqueça pranchas, flexões e essas coisas</h2>
-    <p class="subheadline">
-      O DANCEFIT vai te ajudar a entrar em forma com métodos de dança que são comprovadamente
-      mais eficazes (mesmo que você não saiba dançar)
-    </p>
+      <h2 class="headline destaque-bonus">Esqueça pranchas, flexões e essas coisas</h2>
+      <p class="subheadline">
+        O DANCEFIT vai te ajudar a entrar em forma com métodos de dança que são comprovadamente
+        mais eficazes (mesmo que você não saiba dançar)
+      </p>
 
-    <div class="video-bloco">
-      <img src="img/video-bonus.webp" alt="Mulher dançando" class="video-thumb" />
-      <p class="legenda-video">INCRÍVEL</p>
-    </div>
+      <div class="video-bloco">
+        <img src="img/video-bonus.webp" alt="Mulher dançando" class="video-thumb" />
+        <p class="legenda-video">INCRÍVEL</p>
+      </div>
 
-    <div class="bloco-bonus">
-      <h3 class="bonus-titulo">🎁 Primeiro bônus da gamificação</h3>
-      <p>Vamos entregar uma nutricionista que custaria <strong>“xx” reais/mês</strong> de graça pra você.</p>
-    </div>
+      <div class="bloco-bonus">
+        <h3 class="bonus-titulo">🎁 Primeiro bônus da gamificação</h3>
+        <p>Vamos entregar uma nutricionista que custaria <strong>“xx” reais/mês</strong> de graça pra você.</p>
+      </div>
 
-    <button class="botao-avanco" onclick="irParaProximaEtapa2('step9', 'step10')">Continuar ➜</button>
+      <button class="botao-avanco" onclick="irParaProximaEtapa('step9', 'step10');  atualizarTrilha('step10')">Continuar ➜</button>
   </section>
 
   <!-- STEP 10 - Escolha visual -->
   <section class="step10" style="display: none;">
-    <h2 class="headline">iro?</h2>
+    <h2 class="headline">Quantas vezes por semana você gostaria de dançar?</h2>
 
     <!-- Bloco de opções -->
     <div class="card-opcao">
       <img src="img/corpo1.webp" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>1 - 2 vezes</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
@@ -266,14 +385,303 @@
     <div class="card-opcao">
       <img src="img/corpo1.wep" alt="">
       <label>
-        <span>Trabalhar todo o corpo</span>
+        <span>3 - 4 vezes</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+    
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>5+ vezes</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+    
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step10', 'step11'); atualizarTrilha('step11')">Avançar ➜</button>
+  </section>
+
+<!-- STEP 11 - Escolha visual -->
+  <section class="step11" style="display: none;">
+
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      1-2 vezes por semana.</strong>
+    </p>
+
+    <p style="color: #ff5c5c; font-weight: 500; text-align: center; margin-bottom: 0.5rem;">
+      Mesmo com apenas 2 dias por semana, nosso plano pode acelerar seu metabolismo e<br>
+      começar a moldar seu corpo.
+    </p>
+
+    <p style="color: #3c1e84; font-weight: 600; text-align: center;">
+      Quanto tempo você quer dançar por dia?
+    </p>
+
+    <p style="color: #3c1e84; font-weight: 400; text-align: center;">
+      Você só precisa de 3 músicas por dia para derreter muita gordura.
+    </p>
+
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Menos de 1 ano</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>5-10 minutos</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>10-20 minutos</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>20-30 minutos</span>
         <input type="checkbox" class="toggle-opcao">
         <span class="switch"></span>
       </label>
     </div>
     
 
-    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step10', 'step11')">Avançar ➜</button>
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step11', 'step12'); atualizarTrilha('step12')">Avançar ➜</button>
+  </section>
+
+<!-- STEP 12 - Escolha visual -->
+  <section class="step12" style="display: none;">
+
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Você sofreu alguma lesão recentemente?
+    </p>
+
+    <p style="color: #ff5c5c; font-weight: 500; text-align: center; margin-bottom: 0.5rem;">
+      Nós elaboramos seu plano com base na sua condição, então nada vai te impedir de<br>
+      aproveitar as nossas danças!
+    </p>
+
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Sem lesões</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Joelho</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Ombro</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Pescoço</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+  
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Braços</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Cotovelos</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Pernas</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Pés</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step12', 'step13'); atualizarTrilha('step13')">Avançar ➜</button>
+  </section>
+
+    <!-- STEP 13 - primeira quebra -->
+  <section class="step9" style="display: none;">
+      <img src="img/logo.webp" alt="Logo" class="logo" />
+
+      <h2 class="headline destaque-bonus">Segundo bônus de gamificação:</h2>
+      <p class="subheadline">
+        Você ganhou uma professora de dança particular para guiar seus treinos que custaria "xx" por mês de graça.
+      </p>
+
+      <div class="video-bloco">
+        <img src="img/video-bonus.webp" alt="Mulher dançando" class="video-thumb" />
+        <p class="legenda-video">INCRÍVEL</p>
+      </div>
+
+      <button class="botao-avanco" onclick="irParaProximaEtapa('step13', 'step14');  atualizarTrilha('step14')">Continuar ➜</button>
+  </section>
+
+<!-- STEP 14 - Escolha visual -->
+  <section class="step14" style="display: none;">
+
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Como é a sua rotina hoje?
+    </p>
+
+    <p style="color: #ff5c5c; font-weight: 500; text-align: center; margin-bottom: 0.5rem;">
+      Seu plano vai ser adaptado pra sua agenda real.
+    </p>
+
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Trabalho fixo</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Horários flexíveis</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Trabalho à noite</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Não trabalho</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+  
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Dona de casa</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step14', 'step15'); atualizarTrilha('step15')">Avançar ➜</button>
+  </section>
+
+<!-- STEP 15 - Escolha visual -->
+  <section class="step15" style="display: none;">
+
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Quão ativa você é?
+    </p>
+
+    <p style="color: #ff5c5c; font-weight: 500; text-align: center; margin-bottom: 0.5rem;">
+      Vamos levar em consideração para criar o seu plano!
+    </p>
+
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Sedentária<br>
+        eu não me exercito ou me mexo muito</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Pouco ativa<br>
+        não faço exercícios mas me mexo muito</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Ativa<br>
+        pratico exercícios algumas vezes na semana</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Muito ativa<br>
+        Me exercito quase todo dia</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+  
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step12', 'step13'); atualizarTrilha('step13')">Avançar ➜</button>
   </section>
 
 
@@ -294,6 +702,118 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Step roleta-->
+  <section class="stepx" style="display: none;">
+    <div class="roleta-canvas-container">
+      <canvas id="canvasRoleta" width="300" height="300"></canvas>
+      <div class="ponteiro-canvas"></div>
+    </div>
+
+    <button class="girar-roleta" id="btnGirarCanvas">Girar 🎉</button>
+
+    <div id="resultadoRoleta" class="resultado-roleta" style="display: none;">
+      <h2>🎉 Parabéns!</h2>
+      <p>Você ganhou R$5 de desconto especial</p>
+      <button class="botao-avanco" onclick="irParaProximaEtapa('stepx', 'stepx')">Continuar ➜</button>
+    </div>
+  </section>
+
+
+ <!-- STEP fim - Conteúdo visual conforme o print -->
+  <section class="stepx" style="display: none;">
+    <h2 class="headline">10</h2>
+
+    <div class="antes-depois">
+      <div class="lado">
+        <h3>Agora</h3>
+        <img src="img/antes.webp" alt="Antes">
+      </div>
+      <div class="lado">
+        <h3>Seu objetivo</h3>
+        <img src="img/depois.webp" alt="Depois">
+      </div>
+    </div>
+
+    <ul class="beneficios">
+      <li>✅ Plano pessoal de perda de peso de 15 dias adaptado à sua idade, tipo corporal e IMC</li>
+      <li>✅ Treinos curtos, mas eficazes. Apenas 10 minutos por dia para queimar gordura rapidamente</li>
+      <li>✅ Mais de 300 treinos de dança diversos e programas especiais</li>
+      <li>✅ Possibilidade de praticar em qualquer lugar e sem equipamentos</li>
+      <li>✅ Estilos de dança mais populares – experimente um novo todos os dias</li>
+    </ul>
+
+    <div class="oferta">
+      <p class="timer">A sua oferta especial expira em <strong>08:17</strong></p>
+      <div class="preco">
+        <p>PAGAMENTO ÚNICO</p>
+        <h2>R$ 5,56</h2>
+        <button class="botao-compra">Garanta o meu plano</button>
+      </div>
+      <img src="img/formas-pagamento.webp" alt="Formas de pagamento">
+    </div>
+
+    <div class="como-receber">
+      <h3>Como irei receber meu acesso a tudo isso?</h3>
+      <p>Assim que o pagamento for aprovado, você receberá um e-mail com todos os dados para acessar o plano completo. A entrega é imediata!</p>
+    </div>
+
+    <div class="garantia">
+      <h4>Garantia 100% de sua decisão e o valor</h4>
+      <p>Você tem 7 dias para testar e se não gostar por qualquer motivo, devolvemos 100% do seu dinheiro.</p>
+    </div>
+  </section>
 
   <script src="js/script.js"></script>
 </body>
