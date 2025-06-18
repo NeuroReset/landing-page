@@ -1140,8 +1140,51 @@
       </label>
     </div>
 
-    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step24', 'step25'); atualizarTrilha('step25')">Avançar ➜</button>
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step25', 'step26'); atualizarTrilha('step26')">Avançar ➜</button>
   </section>
+
+  <!-- STEP 26 - Prova social mãe e filha -->
+  <section class="step26" style="display: none;">
+    <h2 class="headline">Mulheres de todo o Brasil estão mudando de vida com o <span style="color: #6C63FF">DANCEFIT</span></h2>
+
+    <div class="imagem-ilustrativa" style="margin: 2rem auto; max-width: 400px;">
+      <img src="img/mae-e-filha.webp" alt="Mãe e filha dançando" class="hero-img">
+    </div>
+
+    <p style="font-size: 1.1rem; font-weight: 600; line-height: 1.4; color: #222;">
+      Mãe e filha emagrecem 83 kg<br>
+      com aula de dança que queima <strong>800 calorias</strong>
+    </p>
+
+    <p class="subheadline" style="margin: 1rem 0;">
+      93% dos nossos usuários alcançaram seus objetivos
+    </p>
+
+    <button class="botao-avanco" onclick="irParaProximaEtapa('step26', 'step27'); atualizarTrilha('step27')">
+      Parece bom!
+    </button>
+  </section>
+
+  <!-- STEP 25 - Altura -->
+  <section class="step25" style="display: none;">
+    <h2 class="headline">Informe a sua altura</h2>
+    <p class="subheadline">Levaremos em conta para criar o seu plano personalizado</p>
+
+    <div class="unidades-toggle">
+      <button id="btnCm" class="unidade ativa">cm</button>
+      <button id="btnPol" class="unidade">pol</button>
+    </div>
+
+    <div class="altura-display">
+      <input type="number" id="alturaInput" min="0" value="0">
+      <span id="unidadeLabel">cm</span>
+    </div>
+
+    <button id="continuarAltura" class="botao-avanco" disabled onclick="salvarAlturaEAvancar()">
+      Continuar
+    </button>
+  </section>
+
 
 
 
