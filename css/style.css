@@ -197,28 +197,11 @@ body {
 
 /* responsividade do mobile */
 @media screen and (max-width: 600px) {
-  .container,
+  section[class^="step"],
   .page2,
-  .step3,
-  .step4,
-  .step5,
-  .step6,
-  .step7,
-  .step8,
-  .step9,
-  .step10{
+  .container {
     padding: 1.5rem 1rem;
-  }
-
-  .step3,
-  .step4,
-  .step5,
-  .step6,
-  .step7,
-  .step8,
-  .step9,
-  .step10 {
-    margin-top: 4rem; /* Adiciona espaço entre a trilha e o conteúdo */
+    margin-top: 4rem;
   }
 
   .headline {
@@ -245,20 +228,20 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .card-opcao img {
     width: 60px;
     height: 60px;
     margin-right: 1rem;
-    margin-bottom: 0;
     object-fit: cover;
     border-radius: 10px;
   }
 
   .card-opcao label {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex: 1;
@@ -273,21 +256,19 @@ body {
     font-size: 1rem;
     padding: 1rem;
     width: 100%;
-    max-width: none;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  .nome-input {
+  .nome-input,
+  .hero-img {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     font-size: 1rem;
   }
-
-  .hero-img {
-    width: 100%;
-    max-width: 100%;
-  }
 }
+
 
 .trilha-progresso {
   position: fixed;
@@ -636,4 +617,54 @@ body {
 .porcentagem {
   font-size: 0.9rem;
   color: #333;
+}
+
+section[class^="step"] {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+}
+
+.card-nivel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-align: left;
+}
+
+.card-nivel:hover {
+  background: #f0f0f0;
+}
+
+.card-nivel.selecionado {
+  background: #C2FF00;
+  border-color: #A8E600;
+}
+
+.card-nivel .texto {
+  flex: 1;
+}
+
+.card-nivel .titulo {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-nivel .descricao {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-nivel input {
+  display: none;
 }
