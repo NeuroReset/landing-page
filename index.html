@@ -1165,8 +1165,8 @@
     </button>
   </section>
 
-  <!-- STEP 25 - Altura -->
-  <section class="step25" style="display: none;">
+  <!-- STEP 27 - Altura -->
+  <section class="step27" style="display: none;">
     <h2 class="headline">Informe a sua altura</h2>
     <p class="subheadline">Levaremos em conta para criar o seu plano personalizado</p>
 
@@ -1185,75 +1185,321 @@
     </button>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- STEP 28 - Peso atual -->
+  <section class="step28" style="display: none;">
+    <h2 class="headline">Qual o seu peso atual?</h2>
+    <p class="subheadline">Levaremos em conta para criar o seu plano personalizado</p>
+
+    <div class="unidades-toggle">
+      <button id="btnKg" class="unidade ativa">kg</button>
+      <button id="btnLb" class="unidade">lb</button>
+    </div>
+
+    <div class="altura-display">
+      <input type="number" id="pesoInput" min="0" value="0">
+      <span id="unidadePesoLabel">kg</span>
+    </div>
+
+    <button id="continuarPeso" class="botao-avanco" disabled onclick="salvarPesoEAvancar()">
+      Continuar
+    </button>
+  </section>
+
+  <!-- STEP 29 - Meta de peso -->
+  <section class="step29" style="display: none;">
+    <h2 class="headline">Qual a sua meta de peso?</h2>
+    <p class="subheadline">Qual é o peso ideal que você quer atingir?</p>
+
+    <div class="unidades-toggle">
+      <button id="btnMetaKg" class="unidade ativa">kg</button>
+      <button id="btnMetaLb" class="unidade">lb</button>
+    </div>
+
+    <div class="altura-display">
+      <input type="number" id="metaPesoInput" min="0" value="0">
+      <span id="unidadeMetaLabel">kg</span>
+    </div>
+
+    <button id="continuarMetaPeso" class="botao-avanco" disabled onclick="salvarMetaPesoEAvancar()">
+      Continuar
+    </button>
+  </section>
+
+  <!-- STEP 30 - Idade -->
+  <section class="step30" style="display: none;">
+    <h2 class="headline">Quantos anos você tem?</h2>
+    <p class="subheadline">Iremos construir o seu plano de acordo</p>
+
+    <input
+      type="number"
+      id="idadeInput"
+      class="nome-input"
+      placeholder="Ex: 55"
+      min="1"
+      max="120"
+    >
+
+    <button
+      id="continuarIdade"
+      class="botao-avanco"
+      disabled
+      onclick="salvarIdadeEAvancar()"
+    >
+      Continuar
+    </button>
+  </section>
+
+  <!-- STEP 31 - Resumo exclusivo do perfil -->
+  <section class="step31" style="display: none;">
+    <h2 class="headline" style="color: #f44336;">
+      Aqui está o resumo exclusivo do seu perfil
+    </h2>
+
+    <div style="background: #ffe5e5; border-left: 5px solid #f44336; padding: 1rem; margin: 1.5rem auto; max-width: 500px; border-radius: 6px; text-align: left; font-size: 0.95rem;">
+      <strong>IMC Acima da média</strong><br>
+      Tensão arterial elevada, risco acrescido de ataque cardíaco, AVC, diabetes tipo 2, dores crônicas nas costas e articulações
+    </div>
+
+    <div class="comparativo-corpo" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+      <div style="text-align: center;">
+        <h4>Agora</h4>
+        <img src="img/antes.webp" alt="Antes" style="max-width: 140px; border-radius: 8px; margin-bottom: 0.5rem;">
+        <p><strong>23kg</strong><br>Percentual de gordura</p>
+        <p><strong style="color: #f44336;">51%</strong><br>Metabolismo</p>
+        <div style="color: #f44336;">● ● ● ○ ○</div>
+      </div>
+
+      <div style="text-align: center;">
+        <h4>Após 21 dias</h4>
+        <img src="img/depois.webp" alt="Depois" style="max-width: 140px; border-radius: 8px; margin-bottom: 0.5rem;">
+        <p><strong>123kg</strong><br>Percentual de gordura</p>
+        <p><strong style="color: #4caf50;">23%</strong><br>Metabolismo</p>
+        <div style="color: #4caf50;">● ● ● ● ○</div>
+      </div>
+    </div>
+
+    <p style="font-size: 0.95rem; color: #555; margin-bottom: 2rem;">
+      A porcentagem de gordura corporal ideal para mulheres é entre 21% e 31%.
+    </p>
+
+    <button class="botao-avanco" onclick="irParaProximaEtapa('step31', 'step32'); atualizarTrilha('step32')">
+      Continuar
+    </button>
+  </section>
+
+  <!-- STEP 32 - Escolha visual -->
+  <section class="step32" style="display: none;">
+
+    <p class="headline" style="color: #ff5c5c; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Algum evento próximo te motivou a perder peso agora?
+    </p>
+
+    <p style="color: #ff5c5c; font-weight: 500; text-align: center; margin-bottom: 0.5rem;">
+      Usaremos como incentivo para personalizar seu plano
+    </p>
+
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Viagem</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Casamento</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Evento de esportes</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Verão</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+  
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Reunião de amigos</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Festa de aniversário</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Outra ocasião</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Nenhum, só quero me sentir melhor</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step32', 'step33'); atualizarTrilha('step33')">Avançar ➜</button>
+  </section>
+
+  <!-- STEP 33 - Projeção de perda -->
+  <section class="step33" style="display: none;">
+    <h2 class="headline" style="font-weight: 600; font-size: 1.3rem;">
+      Você pode atingir os <span style="color: #4caf50;">kgs</span> em até <span style="color: #3f51b5;">15 dias!</span>
+    </h2>
+
+    <div style="margin: 2rem auto; max-width: 400px;">
+      <img src="img/grafico-projecao.webp" alt="Gráfico de perda de peso" class="hero-img">
+    </div>
+
+    <p class="subheadline" style="font-size: 0.85rem; margin-bottom: 2rem;">
+      Baseado nos dados de outros membros do DanceFit com perfis semelhantes
+    </p>
+
+    <button class="botao-avanco" onclick="irParaProximaEtapa('step33', 'step34'); atualizarTrilha('step34')">
+      Continuar
+    </button>
+  </section>
+
+  <!-- STEP 34 - Escolha visual -->
+  <section class="step34" style="display: none;">
+
+    <p class="headline" style="color: #000000; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+      Quão confiante você está em atingir kgs em até 15 dias
+    </p>
+
+    <!-- Bloco de opções -->
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Eu acredito que posso fazer isso!</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.wep" alt="">
+      <label>
+        <span>Não tenho certeza, mas eu tentarei!</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="card-opcao">
+      <img src="img/corpo1.webp" alt="">
+      <label>
+        <span>Não tenho tanta certeza</span>
+        <input type="checkbox" class="toggle-opcao">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <button class="botao-avanco" disabled onclick="irParaProximaEtapa('step34', 'step35'); atualizarTrilha('step35')">Avançar ➜</button>
+  </section>
+
+  <!-- STEP 35 - Carregando plano -->
+  <section class="step35" style="display: none;">
+    <h2 class="headline" style="text-align: left; font-size: 1rem; font-weight: 500;">Carregando...</h2>
+
+    <div class="barra-carregamento-container">
+      <div class="barra-carregamento">
+        <div class="progresso" id="barraProgressoInterna"></div>
+      </div>
+      <span id="porcentagem" class="porcentagem">0%</span>
+    </div>
+
+    <p class="subheadline" style="margin-top: 1rem;">
+      Estamos elaborando o seu plano <strong style="color: #6C63FF;">DANCEFIT</strong>
+    </p>
+  </section>
+
+  <!-- STEP 36 - Último bônus liberado -->
+  <section class="step36" style="display: none;">
+    <img src="img/explosao.webp" alt="Explosão visual" class="hero-img" />
+
+    <div class="bloco-bonus">
+      <p style="font-size: 1rem; line-height: 1.6;">
+        🔓 <strong>7. Acesso Vitalício Desbloqueado!</strong><br>
+        📱 <strong>8. Bônus: App Oficial do DANCEFIT Liberado!</strong>
+      </p>
+    </div>
+
+    <button class="botao-avanco" onclick="irParaProximaEtapa('step36', 'step37'); atualizarTrilha('step37')">
+      Continuar ➜
+    </button>
+  </section>
+
+  <!-- STEP 37 - Plano pronto -->
+  <section class="step37" style="display: none;">
+    <h2 class="headline" style="font-weight: 600; font-size: 1.3rem;">
+      ✅ O seu plano de perda de peso está pronto!
+    </h2>
+
+    <div style="margin: 2rem auto; max-width: 400px;">
+      <img src="img/grafico-projecao.webp" alt="Gráfico do plano final" class="hero-img">
+    </div>
+
+    <button class="botao-avanco" onclick="irParaProximaEtapa('step37', 'step38'); atualizarTrilha('step38')">
+      Continuar
+    </button>
+  </section>
+
+  <!-- STEP 38 - Perder peso dançando -->
+  <section class="step38" style="display: none;">
+    <h2 class="headline" style="text-transform: uppercase; font-size: 1.3rem;">
+      PERCA PESO MESMO <br> SEM SABER DANÇAR!
+    </h2>
+
+    <div style="margin: 1.5rem auto; max-width: 420px;">
+      <img src="img/aula-iniciantes.webp" alt="Aula de dança para iniciantes" class="hero-img">
+    </div>
+
+    <p class="subheadline" style="font-size: 0.95rem; color: #333; font-weight: 500;">
+      Nossos módulos para iniciantes com passos básicos permitem que
+      <span style="color: #3f51b5; font-weight: 600;">qualquer pessoa</span> entre em forma enquanto dança!
+    </p>
+
+    <button class="botao-avanco" onclick="irParaProximaEtapa('step38', 'step39'); atualizarTrilha('step39')">
+      Continuar
+    </button>
+  </section>
 
   <!--Step roleta-->
-  <section class="stepx" style="display: none;">
+  <section class="step39" style="display: none;">
     <div class="roleta-canvas-container">
       <canvas id="canvasRoleta" width="300" height="300"></canvas>
       <div class="ponteiro-canvas"></div>
@@ -1264,13 +1510,13 @@
     <div id="resultadoRoleta" class="resultado-roleta" style="display: none;">
       <h2>🎉 Parabéns!</h2>
       <p>Você ganhou R$5 de desconto especial</p>
-      <button class="botao-avanco" onclick="irParaProximaEtapa('stepx', 'stepx')">Continuar ➜</button>
+      <button class="botao-avanco" onclick="irParaProximaEtapa('step39', 'step40')">Continuar ➜</button>
     </div>
   </section>
 
 
  <!-- STEP fim - Conteúdo visual conforme o print -->
-  <section class="stepx" style="display: none;">
+  <section class="step40" style="display: none;">
     <h2 class="headline">10</h2>
 
     <div class="antes-depois">
@@ -1315,5 +1561,6 @@
 
 
   <script src="js/script.js"></script>
+  
 </body>
 </html>
