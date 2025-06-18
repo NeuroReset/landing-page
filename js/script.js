@@ -350,3 +350,16 @@ function iniciarCarregamentoStep35() {
   }, 50) // 50ms x 100 = 5 segundos total
 }
 
+document.querySelectorAll('.card-nivel').forEach(card => {
+  card.addEventListener('click', () => {
+    // remove seleção anterior
+    document.querySelectorAll('.card-nivel').forEach(c => c.classList.remove('selecionado'))
+
+    // adiciona classe ao clicado
+    card.classList.add('selecionado')
+
+    // ativa botão se existir
+    const btn = card.closest('section').querySelector('.botao-avanco')
+    if (btn) btn.disabled = false
+  })
+})
