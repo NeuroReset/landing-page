@@ -173,3 +173,180 @@ btn.addEventListener('click', () => {
   // Sempre cair no índice 1 → 'R$5 OFF'
   girarParaPremio(1)
 })
+
+document.querySelectorAll('.card-sono').forEach(card => {
+  card.addEventListener('click', () => {
+    // remove seleção de todos
+    document.querySelectorAll('.card-sono').forEach(c => c.classList.remove('selecionado'))
+
+    // seleciona o clicado
+    card.classList.add('selecionado')
+  })
+})
+
+window.addEventListener('DOMContentLoaded', () => {
+  let unidadeAtual = 'cm'
+
+  const btnCm = document.getElementById('btnCm')
+  const btnPol = document.getElementById('btnPol')
+  const alturaInput = document.getElementById('alturaInput')
+  const unidadeLabel = document.getElementById('unidadeLabel')
+  const btnContinuar = document.getElementById('continuarAltura')
+
+  if (!btnCm || !btnPol || !alturaInput || !unidadeLabel || !btnContinuar) {
+    console.warn('Elementos não encontrados. Verifique os IDs no HTML.')
+    return
+  }
+
+  btnCm.addEventListener('click', () => {
+    unidadeAtual = 'cm'
+    btnCm.classList.add('ativa')
+    btnPol.classList.remove('ativa')
+    unidadeLabel.textContent = 'cm'
+  })
+
+  btnPol.addEventListener('click', () => {
+    unidadeAtual = 'pol'
+    btnPol.classList.add('ativa')
+    btnCm.classList.remove('ativa')
+    unidadeLabel.textContent = 'pol'
+  })
+
+  alturaInput.addEventListener('input', () => {
+    btnContinuar.disabled = Number(alturaInput.value) <= 0
+  })
+
+  btnContinuar.addEventListener('click', () => {
+    const altura = Number(alturaInput.value)
+    localStorage.setItem(
+      'alturaUsuario',
+      JSON.stringify({ altura, unidade: unidadeAtual })
+    )
+    irParaProximaEtapa('step27', 'step28')
+    atualizarTrilha('step28')
+  })
+})
+
+window.addEventListener('DOMContentLoaded', () => {
+  const btnKg = document.getElementById('btnKg')
+  const btnLb = document.getElementById('btnLb')
+  const pesoInput = document.getElementById('pesoInput')
+  const unidadePesoLabel = document.getElementById('unidadePesoLabel')
+  const btnContinuarPeso = document.getElementById('continuarPeso')
+
+  if (!btnKg || !btnLb || !pesoInput || !unidadePesoLabel || !btnContinuarPeso) return
+
+  let unidadePeso = 'kg'
+
+  btnKg.addEventListener('click', () => {
+    unidadePeso = 'kg'
+    btnKg.classList.add('ativa')
+    btnLb.classList.remove('ativa')
+    unidadePesoLabel.textContent = 'kg'
+  })
+
+  btnLb.addEventListener('click', () => {
+    unidadePeso = 'lb'
+    btnLb.classList.add('ativa')
+    btnKg.classList.remove('ativa')
+    unidadePesoLabel.textContent = 'lb'
+  })
+
+  pesoInput.addEventListener('input', () => {
+    btnContinuarPeso.disabled = Number(pesoInput.value) <= 0
+  })
+
+  window.salvarPesoEAvancar = function () {
+    const peso = Number(pesoInput.value)
+
+    localStorage.setItem('pesoUsuario', JSON.stringify({
+      peso,
+      unidade: unidadePeso
+    }))
+
+    irParaProximaEtapa('step28', 'step29')
+    atualizarTrilha('step29')
+  }
+})
+
+window.addEventListener('DOMContentLoaded', () => {
+  const btnMetaKg = document.getElementById('btnMetaKg')
+  const btnMetaLb = document.getElementById('btnMetaLb')
+  const metaPesoInput = document.getElementById('metaPesoInput')
+  const unidadeMetaLabel = document.getElementById('unidadeMetaLabel')
+  const btnContinuarMeta = document.getElementById('continuarMetaPeso')
+
+  if (!btnMetaKg || !btnMetaLb || !metaPesoInput || !unidadeMetaLabel || !btnContinuarMeta) return
+
+  let unidadeMeta = 'kg'
+
+  btnMetaKg.addEventListener('click', () => {
+    unidadeMeta = 'kg'
+    btnMetaKg.classList.add('ativa')
+    btnMetaLb.classList.remove('ativa')
+    unidadeMetaLabel.textContent = 'kg'
+  })
+
+  btnMetaLb.addEventListener('click', () => {
+    unidadeMeta = 'lb'
+    btnMetaLb.classList.add('ativa')
+    btnMetaKg.classList.remove('ativa')
+    unidadeMetaLabel.textContent = 'lb'
+  })
+
+  metaPesoInput.addEventListener('input', () => {
+    btnContinuarMeta.disabled = Number(metaPesoInput.value) <= 0
+  })
+
+  window.salvarMetaPesoEAvancar = function () {
+    const pesoMeta = Number(metaPesoInput.value)
+
+    localStorage.setItem('metaPesoUsuario', JSON.stringify({
+      peso: pesoMeta,
+      unidade: unidadeMeta
+    }))
+
+    irParaProximaEtapa('step29', 'step30')
+    atualizarTrilha('step30')
+  }
+})
+
+window.addEventListener('DOMContentLoaded', () => {
+  const idadeInput = document.getElementById('idadeInput')
+  const btnContinuarIdade = document.getElementById('continuarIdade')
+
+  if (!idadeInput || !btnContinuarIdade) return
+
+  idadeInput.addEventListener('input', () => {
+    const idade = Number(idadeInput.value)
+    btnContinuarIdade.disabled = idade < 10 || idade > 120
+  })
+
+  window.salvarIdadeEAvancar = function () {
+    const idade = Number(idadeInput.value)
+    localStorage.setItem('idadeUsuario', idade)
+    irParaProximaEtapa('step30', 'step31')
+    atualizarTrilha('step31')
+  }
+})
+
+function iniciarCarregamentoStep35() {
+  const barra = document.getElementById('barraProgressoInterna')
+  const percentual = document.getElementById('porcentagem')
+
+  let progresso = 0
+
+  const intervalo = setInterval(() => {
+    progresso++
+
+    barra.style.width = `${progresso}%`
+    percentual.textContent = `${progresso}%`
+
+    if (progresso >= 100) {
+      clearInterval(intervalo)
+      irParaProximaEtapa('step35', 'step36')
+      atualizarTrilha('step36')
+    }
+  }, 50) // 50ms x 100 = 5 segundos total
+}
+
